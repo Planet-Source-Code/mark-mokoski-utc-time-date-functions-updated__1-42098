@@ -1,0 +1,41 @@
+Set of functions to return UTC Time / Date using some API calls
+Format of functions similar to standard Time / Date
+funtions in VB (Time, Time$, Date, Date$, Now)
+Date functions use TimeSerial, DateSerial and Named Formats in VB,
+so the output of date functions will follow conventions for the users
+country/regional settings.
+
+Example: United States date is MM/DD/YYYY, Europe is DD/MM/YYYY.
+
+Function examples are in United States format
+
+Also there are two funtions that return the name of the
+time zone the system is set for, one the short name (like "EST"),
+the second for the long name (like "Eastern Standard Time")
+Some of the time zone names don't realy work
+well with short names.  But it works fine for most
+U.S. and Canada time zones.  Change the code as you see fit.
+Short and Long Time Zone Names change to "Daylight Time"
+if a daylight time zone is selected.
+
+List of new functions with there VB local time equivalent
+
+UTC_time function   VB function     Format
+UTCtime             Time$           24 Hour HH:MM:SS
+UTCdate             Date            MM/DD/YYYY  (region dependent)
+UTCnow              Now             MM/DD/YYYY HH:MM:SS AM/PM   (region dependent)
+shortTZname         ----            XXX Ex: "EST", 3 to 5 letters
+longTZname          ----            Long name Ex: "Eastern Standard Time"
+ISOdate             Date            ISO 8601 format yyyy-mm-dd
+ISOtime             Time            ISO 8601 format hh:mm:ssZ
+ISOnow              Now             ISO 8601 format yyyy-mm-ddThh:mm:ssZ
+
+Time zone and UTC time functions assume the correct time zone is selected
+in the Time/Date properties and clock set correct local time.'
+
+Mark Mokoski, 03-JAN-2003
+markm@cmtelephone.com
+
+Update 20-May-2004
+
+Fixed daylight time time zone name problem
